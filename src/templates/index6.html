@@ -1,0 +1,461 @@
+
+<html lang="en" dir="ltr" id="climate-scorecard">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Terrorist Attacks DV</title>
+    <link rel="stylesheet" type="text/css" href="dc.css">
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="./lib/js/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="dc.css">
+    <link rel="stylesheet" href="./lib/nv.d3.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+
+    <script src="crossfilter.js"></script>
+    <script src="d3.js"></script>
+    <script src="dc.js"></script>
+    <script src="./lib/js/jquery.min.js"></script>
+    <script src="./lib/js/filter-input.js"></script>
+    <script src="./lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+
+
+<nav style="margin-bottom: 0px; border-width: 0 px; border-top-width: 5px; border-color: #3eb249;" class="navbar navbar-inverse" role="navigation">
+<div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" style="color:#FFF" href="/" data-ajax="false">Visualizing Data of Hit Places:</a>
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hit Places<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            <li><a href="climate.html" data-ajax="false">Climate Change</a></li>
+            <li><a href="fracking.html" data-ajax="false">Fracking</a></li>
+            <li><a href="gmo.html" data-ajax="false">GMO</a></li>
+            <li><a href="/arms.html" data-ajax="false">Arms trade</a></li>
+            <li><a href="/lgbt.html" data-ajax="false">LGBT</a></li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/methodology.html" data-ajax="false">Methodology</a></li>
+            <li><a href="/about.html" data-ajax="false">About</a></li>
+        </ul>
+    </div>
+</div>
+</nav>
+<div style="background-image: url('background_img.png'); background-size: cover;">
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <div>
+                    <h1>Global Terrorism</h1>
+                    <p> Data Visulization of Terrorist Attacks From 1970 to 2016</p>
+                    </div>
+                    <div >
+                        <div id="search-input"  ></div>
+
+                    </div
+                    <span class="help-block" style="color: #E1E1E1;">Filter by attack type/year/target type .
+                        <button style="float: right; color: black;" class="btn resetall" data-icon="delete"  href="javascript:dc.filterAll(); dc.renderAll();">Reset All</button>
+                    </span>
+                    <br />
+                </div>
+                <div class="col-md-4 frontpage_score" style="margin-top:50px">
+                    <div></div>
+                    <div>   </div>
+                    <div class="dc-data-count">
+                        <div class="center-block">
+                            <div class="graph_titles text-center"><h2>Number of Terrorist Attacks
+                                <div style="background-color: white; border-radius: 5px" class="filter-count"></div></h2></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+<div class="row">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="ep2014list">
+
+                <div class="col-md-12">
+                 <div class="text-center graph_titles"><h2>Select Continent by clicking on the bar chart</h2></div>
+
+                    <div id="bar_continent"  class="country"> </div>
+                </div>
+
+
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default filter-panel-containe">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" href="#collapseOne" class="collapsed">
+                            <h4 class="panel-title">
+                            Click here for more filters
+                            <span class="glyphicon glyphicon-chevron-down" < span>
+                            </h4>
+                            </a>
+                        </div>
+
+                        <div id="collapseOne" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="yearly-hits center-block">
+                                            <div class="graph_titles text-center">
+                                                <h2>Hits Per Year</h2>
+                                                <h5>Select Range of Years</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="targeted-Countries center-block">
+                                            <div class="graph_titles text-center">
+                                                <h2>Top 5 Targeted Countries</h2>
+                                                <h5>Select a Country for More Info</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="attack-type center-block">
+                                            <div class="graph_titles text-center">
+                                                <h2>Type of Attacks</h2>
+                                                <h5>Select Type of Attackr</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="list"></div>
+            <div class="row"></div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row" >
+    <div class="container">
+        <div class="row" >
+            <div>
+                <div class="dc-data-count">
+                    <span class="filter-count"></span><a
+                    href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+                </div>
+            </div>
+
+            <table class="table table-hover table-responsive dc-data-table"></table>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+      $(".resetall").click(function(){$(".resetall").attr("disabled",false);dc.filterAll();dc.renderAll();})
+     //     $(".resetall").click(function(){$(".resetall").attr("disabled",true);dc.renderAll();})
+
+      var barContinent =dc.barChart("#bar_continent");
+      var yearlyHitsChart = dc.lineChart('.yearly-hits');
+      var countryPieChart = dc.pieChart('.targeted-Countries');
+      var attackTypeLChart = dc.rowChart('.attack-type');
+      var visCount = dc.dataCount(".dc-data-count");
+      var tabelChart = dc.dataTable(".dc-data-table");
+
+
+
+      d3.csv("hitPlacesDataset.csv", function(err, data){
+        if (err) throw err;
+
+            data.forEach(function (d) {
+                var date = d.iyear+"-"+d.imonth+"-"+d.iday
+
+                d.Timestamp = new Date (date);
+            //    d.Timestamp = d.Timestamp.getFullYear()+'/'+(d.Timestamp.getMonth()+1)+'/'+d.Timestamp.getDate();
+            });
+
+          var dateFormat = d3.time.format("%Y");
+                  data.forEach(function (d) {
+                  //  var date = d.iyear+"-"+d.imonth+"-"+d.iday
+                    d.time = dateFormat.parse(d.iyear);
+                //    d.Timestamp = d.Timestamp.getFullYear()+'/'+(d.Timestamp.getMonth()+1)+'/'+d.Timestamp.getDate();
+                });
+
+            var ndx = crossfilter(data);
+            var all = ndx.groupAll();
+
+
+          // set dimensions
+       var barContinentDim=ndx.dimension(function (d) {return d["region_txt"] });
+
+       var yearlyHitsDim= ndx.dimension(function(d){ return d.time.getFullYear()});
+       var countryDim=ndx.dimension(function (d) {return d["country_txt"].toLowerCase() });
+       var attackTypeDim=ndx.dimension(function (d) {return d["attacktype1_txt"] });
+
+       var filterDim =ndx.dimension(function (d) {return d["region_txt"].toLowerCase()+" "+
+                                                     d["country_txt"].toLowerCase()+" "+d["attacktype1_txt"].toLowerCase() +" "+ d.time.getFullYear()});
+
+
+        var chart = dc.inputFilter ("#search-input")
+            		.dimension(filterDim)
+
+
+
+
+
+        // set the grouping
+
+        var barContinentDimGroup = barContinentDim.group();
+        var countryDimGroup= countryDim.group();
+        var attackTypeDimGroup = attackTypeDim.group();
+
+
+
+        barContinent
+            .width(800)
+            .height(300)
+            .x(d3.scale.ordinal())
+            .xUnits(dc.units.ordinal)
+            .brushOn(false)
+            .yAxisLabel("Number of Hits")
+            .dimension(barContinentDim)
+            .renderHorizontalGridLines(true)
+            .renderVerticalGridLines(true)
+            .barPadding(0.4)
+            .outerPadding(0.01)
+            .colors(d3.scale.ordinal().domain(["low","med","high"])
+                                .range(["#ccc","#d0e5cc","#CF1919"]))
+            .colorAccessor(function(d) {
+                if(d.value <10000)
+                    return "positive"
+                else if(d.value<25000)
+                    return "med"
+                return "high";})
+
+            .group(barContinentDimGroup)
+            .label(function(d) { return (d.data.value / ndx.groupAll().reduceCount().value() * 100).toFixed(1) + "%"; })
+            .renderLabel(true)
+            .elasticY(true)
+            .yAxisPadding('10%')
+            .y(d3.scale.linear().domain([0,55000]))
+            .margins({top:5,right:0,bottom:140,left:60 })
+            .on("postRender",function(c){
+                adjustBarChartLabels(c);
+                c.svg()
+                .selectAll("rect.bar")
+                .on("click.scroll",function(d){
+                    scrollTo(d.data.key);});
+            });
+
+
+       yearlyHitsChart
+            .height(200)
+            .width(400)
+            .margins({top: 10,right: 50,bottom: 40,left: 40})
+            .dimension(yearlyHitsDim)
+            .group(yearlyHitsDim.group())
+            .renderArea(true)
+
+            .x(d3.scale.linear().domain([new Date(1970), new Date(2018)]))
+        	.elasticY(true)
+          .on("postRender",function(c){
+            adjustBarChartLabels(c);
+            c.svg()
+                .selectAll("rect")
+                .on("click.scroll",function(d){
+                    scrollTo(d.data.key);});
+           })
+            .xAxis().ticks(10).tickFormat(d3.format("d"));
+
+          function adjustBarChartLabels(chart){
+              chart.svg()
+                   .selectAll('.axis.x text')
+                   .on("click",function(d){
+                        chart.filter(d);
+                        dc.redrawAll();
+                        scrollTo(d);
+                    })
+                  .style("text-anchor","end")
+                  .attr("dx",function(d){return"-0.7em";})
+                  .attr("dy",function(d){return"-7px";})
+                  .attr("transform", function (d) {return "rotate(-75)"});
+           }
+        countryPieChart
+                .width(180)
+                .height(180)
+                .radius(80)
+                .innerRadius(20)
+                .dimension(countryDim)
+                .group(countryDimGroup)
+                 //   .legend(dc.legend())
+
+                .label(function(d) { return d.key +" (" + Math.floor(d.value / all.value() * 100) + "%)"; })
+
+
+                 .data(function (group){ return group.top(5)});
+          attackTypeLChart
+                .dimension(attackTypeDim)
+                .group(attackTypeDimGroup)
+                .elasticX(true)
+                . width(350)
+                .x(d3.scale.linear().domain([0,85000]))
+                .data(function (group){ return group.top(10)})
+
+                .xAxis().ticks(4).tickFormat(d3.format("d"));
+
+             visCount
+                .dimension(ndx)
+                .group(all);
+
+             tabelChart
+                .dimension(yearlyHitsDim)
+               .group(function (d) {
+                    var format = d3.format('02d');
+
+                    return d["iyear"] + '/' + d["imonth"];
+
+                })
+
+                .columns
+             ([
+
+
+                    {
+                         label: "Date",
+                         format: function (d) {
+                             return "Day "+(d["iday"]) ;
+                         }
+                    },
+                    {
+                         label: "Country",
+                         format: function (d) {
+                             return d["country_txt"];
+                         }
+                    },
+
+                    {
+                         label: "Type of Hit",
+                         format: function (d) {
+                             return d["attacktype1_txt"] ;
+                         }
+                    },
+
+                   {
+                         label: "Target",
+                         format: function (d) {
+                             return d["target1"] ;
+                         }
+                    },
+
+                 {
+                         label: "Name of Attacker",
+                         format: function (d) {
+                             return d["gname"] ;
+                         }
+                    },
+
+                ])
+
+                 .sortBy(function (d) {
+                    return parseInt(d["iday"]);
+                });
+
+       // .order(d3.descending);
+
+
+
+
+
+
+
+          //     .y(d3.scale.linear().domain([d3.min(data,function(d){return d["iyear"]}),d3.max(data,function(d){return d["iyear"]})]))
+
+
+      //      .y(d3.scale.linear().domain([0, 48000]))
+
+          //  .x(d3.scale.ordinal()).xUnits(dc.units.ordinal)
+
+          /*
+bar_country.colorCalculator(function(d,i){return color(d.value.score/d.value.count);}).valueAccessor(function(d){return d.value.count;}).width(700).height(300).outerPadding(0).gap(1).margins({top:10,right:0,bottom:95,left:30}).x(d3.scale.ordinal()).xUnits(dc.units.ordinal).brushOn(false).elasticY(true).yAxisLabel("Number of MEPs").dimension(country).group(countryGroup).on("postRender",function(c){adjustBarChartLabels(c);c.svg().selectAll("rect.bar").on("click.scroll",function(d){scrollTo(d.data.key);});});function adjustBarChartLabels(chart){chart.svg().selectAll('.axis.x text').on("click",function(d){chart.filter(d);dc.
+
+
+var tplPopup=null;
+var tplScore=null;
+var tplTwitter=null;
+var ndx=null;var partyChart=null;
+jQuery(function($){var message="";$(".country").prepend("<div id='alert_placeholder'><div class='alert alert-info'><span></span><button class='close' data-dismiss='alert' aria-hidden='true'>×
+    </button></div></div>");$("#alert_placeholder").hide();$("#search-input").keyup(function(){var s=$(this).val().toLowerCase();wall.dimension().filter(function(d){return d.indexOf(s)!==-1;});
+$(".resetall").attr("disabled",true);dc.redrawAll();console.log($(this).val());});tplPopup=_.template($("#infobox_tpl").text());tplScore=_.template($("#score_tpl").text());tplTwitter=_.template($("#twitter_tpl").text());$(".resetall").click(function(){$("#search-input").val("");$(".resetall").attr("disabled",false);dc.filterAll();dc.renderAll();});$("body").on("click",".btn",function(event){ga&&ga('send','event','button','click',$(this).text());});});if(!hasHashFilter()){$.ajax({url:"https://freegeoip.net/json/?callback=?",crossDomain:true,type:"GET",contentType:"application/json; charset=utf-8;",async:false,dataType:'jsonp',success:function(data){ga&&ga('send','event','country','lookup',data.country_name);if(!bar_country)return;_.each(bar_country.group().top(28),function(d){if(data.country_name==d.key){location.hash="#bar_country";notice("Show only MEPs from "+d.key);bar_country.filter(data.country_name);scrolled=true;dc.redrawAll();$("#collapseOne").collapse("show");}});}});}
+
+*/
+    /*
+    var meps = [];
+    var mepvotes = [];
+
+    $(function() {
+        var _grid = _.after(2, function () {
+            card.grid ("#ep2014list");
+        });
+
+        d3.csv("mep.csv", function(d) {return d;}
+        ,function(error, rows) {
+            meps = rows;
+            _grid ();
+        }
+        );
+
+        d3.csv("data/votes_climate.csv", function(d) {return d;}
+        ,function(error, rows) {
+            card.vote.setRollCall (rows);
+            _grid ();
+        }
+        );
+    });
+    */
+            dc.renderAll();
+
+            });
+
+</script>
+<script>
+
+</script>
+
+</body>
+</html>

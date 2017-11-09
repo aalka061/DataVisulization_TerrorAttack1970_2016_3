@@ -1,0 +1,168 @@
+#
+block2 {
+    float: right;width: 78 % ;min - width: 400 px;
+}#
+block3 {
+    float: left;width: 20 % ;min - width: 320 px;
+}.jqm - demos.jqm - header {
+    border - top: 4 px solid #3eb249;background-color:# fff;
+    padding: 0;
+    min - height: 0 px;
+}.ui - page {
+    min - height: 0 px;
+}.ui - title {
+    margin: 0 10 % ;
+}.center - wrapper {
+    text - align: center;
+}.center - wrapper * {
+    margin: 1 auto;
+}
+h2 {
+    font - size: 22 px;
+}.jqm - demos.jqm - content > h1.starthead {
+        font - size: 3.5e m;
+        width: 50 % ;
+        min - width: 300 px;
+        max - width: 600 px;
+        margin: 0e m auto 0e m auto;
+        text - align: center;
+        font - family: 'Open Sans', sans - serif;
+        font - weight: 300;
+    }.ui - page - theme - a {
+        text - shadow: none;
+        color: #131313;text-shadow:none;}.ui-page-theme-a a{color:# 131313
+    }.ui - page - theme - a a: visited, html.ui - bar - a a: visited, html.ui - body - a a: visited, html body.ui - group - theme - a a: visited {
+        color: #000;}a# ep2014list table,
+        .dc - data - grid {
+            clear: both;padding - left: 3.5e m;
+        }.dc - table - label {
+            background: #F5F5F5;font - weight: bold;
+        }.x line {
+            stroke: none;
+        }
+        body {
+            font - family: sans - serif, arial, helvetica;
+        }.dc - data - grid,
+        .dc - grid - group {
+            clear: both
+        }.dc - grid - group {
+            min - height: 20 px;
+            padding: 5 px 5 px 5 px 20 px;
+        }
+        li div.twitter {
+            position: relative;width: auto;left: 0;bottom: 0;padding - left: 20 px;background - repeat: no - repeat;background - position: 0 0;cursor: pointer;
+        }
+        li div.twitter: hover {
+                text - decoration: underline;
+            }.twitter {
+                position: absolute;left: 21 px;background: url("http://twitter.com/favicon.ico")# fff center;width: 20 px;height: 20 px;padding: 2 px; - webkit - border - radius: 6 x; - moz - border - radius: 6 px;border - radius: 6 px;bottom: 70 px;
+            }.score {
+                position: absolute;right: 21 px;color: #111;background:rgba(255,255,255,0.65);font-size:40px;padding:1px 1px;bottom:70px;font-weight:bold;-webkit-border-radius:6x;-moz-border-radius:6px;border-radius:6px;}# thumbsup {
+                        float: left;
+                    }.ui - block - a {
+                        width: 15 % ;margin - top: 5 px;
+                    }.ui - block - b {
+                        width: 15 % ;margin - top: 5 px;
+                    }.dc - grid - item > div {
+                        padding: 5 px;border - color: #E7E7E7;border - radius: 4 px;text - align: center;box - shadow: 3 - 2 px - 2 px rgba(82, 81, 81, 1) inset;height: 320 px;
+                    }.dc - grid - item > div: hover {
+                        opacity: 0.8;cursor: pointer;
+                    }.dc - grid - item {
+                        position: relative;float: left;min - height: 320 px;margin: 0 10 px 0 px 0;width: 200 px;background - color: #F8F8F8;border - color: #E7E7E7;border - radius: 4 px;text - align: center;box - shadow: 0 1 px 1 px rgba(0, 0, 0, 0.05) inset;margin - bottom: 8 px;
+                    }.dc - grid - item img {
+                        width: 170 px;height: 215 px
+                    }.dc - grid - top h1 {
+                        font - size: 22 px;
+                    }.dc - grid - top h2 {
+                        font - size: 15 px;
+                        color: #121212;text-decoration:none;font-weight:bold;margin-top:8px;}.flag{width:25px;height:15px;background:url(flags.png) no-repeat}.flag.flag-ad{background-position:-25px 0}.flag.flag-al{background-position:-50px 0}.flag.flag-at{background-position:-75px 0}.flag.flag-ba{background-position:-100px 0}.flag.flag-be{background-position:-125px 0}.flag.flag-bg{background-position:-150px 0}.flag.flag-by{background-position:0 -15px}.flag.flag-ch{background-position:-25px -15px}.flag.flag-cz{background-position:-50px -15px}.flag.flag-de{background-position:-75px -15px}.flag.flag-dk{background-position:-100px -15px}.flag.flag-ee{background-position:-125px -15px}.flag.flag-es{background-position:-150px -15px}.flag.flag-fi{background-position:0 -30px}.flag.flag-fo{background-position:-25px -30px}.flag.flag-fr{background-position:-50px -30px}.flag.flag-gb{background-position:-75px -30px}.flag.flag-gi{background-position:-100px -30px}.flag.flag-gr{background-position:-125px -30px}.flag.flag-hr{background-position:-150px -30px}.flag.flag-hu{background-position:0 -45px}.flag.flag-ie{background-position:-25px -45px}.flag.flag-is{background-position:-50px -45px}.flag.flag-it{background-position:-75px -45px}.flag.flag-li{background-position:-100px -45px}.flag.flag-lt{background-position:-125px -45px}.flag.flag-lu{background-position:-150px -45px}.flag.flag-lv{background-position:0 -60px}.flag.flag-mc{background-position:-25px -60px}.flag.flag-md{background-position:-50px -60px}.flag.flag-me{background-position:-75px -60px}.flag.flag-mk{background-position:-100px -60px}.flag.flag-mt{background-position:-125px -60px}.flag.flag-nl{background-position:-150px -60px}.flag.flag-no{background-position:0 -75px}.flag.flag-pl{background-position:-25px -75px}.flag.flag-pt{background-position:-50px -75px}.flag.flag-ro{background-position:-75px -75px}.flag.flag-rs{background-position:-100px -75px}.flag.flag-ru{background-position:-125px -75px}.flag.flag-se{background-position:-150px -75px}.flag.flag-si{background-position:0 -90px}.flag.flag-sk{background-position:-25px -90px}.flag.flag-sm{background-position:-50px -90px}.flag.flag-ua{background-position:-75px -90px}.flag.flag-va{background-position:-100px -90px}a:-webkit-any-link{text-decoration:none;}.age{display:none}.dc-chart.gender .pie-slice{font-size:40px;}.d3-tip{line-height:1;font-weight:bold;padding:12px;background:rgba(200,200,200,0.9);color:# 222;
+                        border - radius: 2 px;
+                        pointer - events: none;
+                    }.d3 - tip h2 {
+                        font - size: 14 px;
+                        color: #222;margin:5px;}.d3-tip ul{padding:0 0 0 10px;margin:0 0 0 10px}.d3-tip:after{box-sizing:border-box;display:inline;font-size:10px;width:100%;line-height:1;color:rgba(200,200,200,0.8);position:absolute;pointer-events:none;}.d3-tip.n:after{content:"\25BC";margin:-1px 0 0 0;top:100%;left:0;text-align:center;}.d3-tip.e:after{content:"\25C0";margin:-4px 0 0 0;top:50%;left:-8px;}.d3-tip.s:after{content:"\25B2";margin:0 0 1px 0;top:-8px;left:0;text-align:center;}.d3-tip.w:after{content:"\25B6";margin:-4px 0 0 -1px;top:50%;left:100%;}.d3-tip.animate{animation:bounceIn 0.2s ease-out;-webkit-animation:bounceIn 0.2s ease-out;}.bar_score svg{position:relative;}.bar_score div# avg_score {
+                            font - size: 130;
+                            color: #111;opacity:0.5;position:relative;margin-bottom:-150px;margin-top:-30px;text-align:center;margin-left:auto;margin-right:auto;min-height:185px;}.dc-data-count .filter-count{color:# 111;
+                            font - weight: bold;
+                        }.dc - data - count.total - count {
+                            color: #111;}.landing-button{margin-left:auto;margin-right:auto;width:50%;}.graph_titles{font-size:0.5em;color:# 232323;margin - left: auto;margin - right: auto;
+                        }.graph_titles h1 {
+                            font - size: 18 px;
+                        }.parties - box {
+                            width: 230 px;
+                        }#
+                        infobox_info li {
+                            list - style - type: none;
+                        }#
+                        score {
+                            font - size: 8e m;
+                        }.group.deselected path {
+                                opacity: 1
+                            }.group path {
+                                stroke: lightgrey
+                            }.ui - header h2.ui - title b {
+                                color: #2c851c}.resetall{clear:both}# search - box label {
+                                    float: none;width: 100 %
+                                }#
+                                search - box ui - input - search {
+                                    width: auto;float: none;
+                                }.abstention {
+                                    border - color: lightgrey
+                                }.absent {
+                                    opacity: 0.5;
+                                }.for {
+                                    border - color: green;
+                                }.against {
+                                    border - color: #bd232a;
+                                }.panel - body {
+                                    background - color: white;
+                                }.for.panel - heading {
+                                    background - color: green;
+                                    color: white
+                                }.against.panel - heading {
+                                    background - color: #bd232a;
+                                    color: white
+                                }.not.mep.panel - heading {
+                                    text - decoration: none
+                                }.dc - chart g.axis.x text {
+                                    cursor: pointer;pointer - events: auto;
+                                }.menu - holder {
+                                    width: 99 px;float: right;top: 10 px;
+                                }.modal - content.close {
+                                    font - size: 3e m;
+                                    opacity: 0.6;
+                                }.infobox_content {
+                                    padding: 10 px;
+                                }.each_vote_container {
+                                    min - height: 160 px;
+                                }.panel - title {
+                                    font - weight: bold;
+                                }.panel {
+                                    min - height: 190 px;
+                                }.panel - body {
+                                    padding: 10 px;font - size: 16 px;
+                                }.panel - body a {
+                                    font - weight: bold;
+                                }.panel - body a: hover {
+                                        color: #808080;}div.dc-chart{float:none;}.dc-chart svg{display:block;margin:auto;}.jumbotron{background-color:rgba(0,0,0,0.6);color:white;margin-bottom:20px;margin-top:20px;padding-top:0px;padding-bottom:0px;}.filter-panel-container{min-height:0px;}.frontpage_score{background-color:# fff;margin - top:  20 px; - webkit - border - radius: 15 px; - moz - border - radius: 15 px;border - radius: 15 px;min - width: 283 px;min - height: 212 px;opacity: 0.7;
+                                    }.header - score {
+                                        color: #333;}# climate - scorecard.modal - backdrop.in {
+                                            background: url(img / climate.jpg) no - repeat center center fixed; - webkit - background - size: cover; - moz - background - size: cover; - o - background - size: cover;background - size: cover;
+                                        }#
+                                        fracking - scorecard.modal - backdrop.in {
+                                            background: url(img / fracking.jpg) no - repeat center center fixed; - webkit - background - size: cover; - moz - background - size: cover; - o - background - size: cover;background - size: cover;
+                                        }.fa {
+                                            font - size: 14 px;
+                                        }.party {
+                                            font - size: 14 px;
+                                            font - family: sans - serif;
+                                            font - weight: bold;
+                                        }#
+                                        share {
+                                            position: absolute;text - align: center;right: 15 px;top: 215 px;z - index: 10;
+                                        }.country.dc - chart g.row text {
+                                            fill: black;
+                                        }.x.axis text {
+                                            text - anchor: end;
+                                            transform: rotate(-90 deg); - webkit - transform: rotate(-90 deg);
+                                        }
