@@ -13,7 +13,7 @@ MONGODB_PORT = 27017
 DBS_NAME = 'terrorDatadb'
 COLLECTION_NAME = 'projects'
 FIELDS = {'iyear': True, 'imonth': True, 
-          'region_txt': True, 'country_txt': True, 
+          'region_txt': True, 'country_txt': True,
           'attacktype1_txt': True,'targtype1_txt': True,
            'iday': True,
           'gname': True, '_id': False}
